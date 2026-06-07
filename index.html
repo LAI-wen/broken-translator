@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>破碎翻譯機</title>
+  <script type="module" crossorigin src="./assets/index-BiuqRNE1.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CVFzygBI.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <main id="app">
+    <section id="hero" class="section">
+      <div class="hero-content">
+        <p class="hero-label">生成式 AI ✕ 小語種</p>
+        <h1 class="hero-title">翻譯，<br>是誰的語言？</h1>
+        <p class="hero-sub">當 AI 說「我會翻譯」，<br>它藏住了什麼</p>
+      </div>
+      <div class="scroll-hint">向下滾動</div>
+    </section>
+
+    <section id="problem" class="section">
+      <div class="section-content">
+        <p class="section-label">問題</p>
+        <h2 data-scroll-reveal>"AI 會犯錯"<br>這句話不夠用了</h2>
+        <p class="body-text" data-scroll-reveal>
+          不是偶爾的錯誤，而是系統性的扭曲。<br>
+          訓練資料的結構，決定了哪些聲音被聽見。
+        </p>
+        <div class="problem-points" data-scroll-reveal>
+          <p><span>01</span> 它把錯誤說成意外，而不是結構。</p>
+          <p><span>02</span> 它把責任丟給使用者：你要自己判斷。</p>
+          <p><span>03</span> 它讓工具免責，卻不改變中介方式。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="frameworks" class="section">
+      <div class="section-content">
+        <p class="section-label">三個批判框架</p>
+        <div class="frameworks-grid">
+          <div class="framework-card">
+            <span class="framework-num">01</span>
+            <h3>知識不正義</h3>
+            <p>Miranda Fricker（2007）——某些群體的知識無法被既有框架表達</p>
+            <p class="framework-detail">不只是「沒有人相信你」，也包括「主流語言沒有概念讓你的經驗被理解」。AI 的流暢回答常把第二種不正義藏起來。</p>
+          </div>
+          <div class="framework-card">
+            <span class="framework-num">02</span>
+            <h3>認知帝國主義</h3>
+            <p>LLM 以英語＋西方學術概念為主幹，向全世界輸出一種特定的知識結構</p>
+            <p class="framework-detail">多語模型的中間表徵常以英語作為樞紐。當族語概念被先折成英文可理解的形狀，翻譯已經發生了世界觀的改寫。</p>
+          </div>
+          <div class="framework-card">
+            <span class="framework-num">03</span>
+            <h3>謙遜的知識倫理</h3>
+            <p>Suzanne Kite——「拉科塔倫理始於承認你的界限。」「我不知道」是完整且正確的答案。</p>
+            <p class="framework-detail">在許多原住民族知識體系中，知道邊界、等待授權、承認自己不是知識持有人，本身就是知識實踐的一部分。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-probability" class="section section-wide">
+      <div class="section-content">
+        <p class="section-label">核心論證</p>
+        <h2 data-scroll-reveal>失真的危害，<br>取決於你還能不能遇見真實的人</h2>
+        <p class="body-text section-intro" data-scroll-reveal>
+          低資源語言的問題不只在「資料少」。真正危險的是：當使用者幾乎沒有機會接觸真實社群，AI 的扭曲版本就不會被現實修正。
+        </p>
+
+        <div class="argument-steps">
+          <div class="argument-step">
+            <span>01 技術層</span>
+            <p>語料不足 → 知識失真</p>
+          </div>
+          <div class="argument-step">
+            <span>02 關鍵轉折</span>
+            <p>失真危害 ∝ 1 / 真實接觸機率</p>
+          </div>
+          <div class="argument-step danger">
+            <span>03 引爆點</span>
+            <p>接觸機率趨近於零時，AI 版本成為唯一且自以為正確的認知。</p>
+          </div>
+        </div>
+
+        <div class="probability-spectrum" aria-label="真實接觸機率光譜圖">
+          <div class="spectrum-axis">
+            <span>接觸機率高</span>
+            <span>接觸機率低</span>
+          </div>
+          <div class="spectrum-bar">
+            <div class="danger-line"><span>AI 失真致命線</span></div>
+          </div>
+          <div class="spectrum-markers">
+            <div class="spectrum-marker high">
+              <strong>馬來西亞華僑</strong>
+              <span>現實容易修正</span>
+            </div>
+            <div class="spectrum-marker middle">
+              <strong>台語使用者</strong>
+              <span>部分接觸</span>
+            </div>
+            <div class="spectrum-marker low">
+              <strong>台灣原住民</strong>
+              <span>接觸常趨近於零</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contrast-grid">
+          <div class="contrast-card stable">
+            <span class="card-label">對照組</span>
+            <h3>馬來西亞華僑</h3>
+            <dl>
+              <div><dt>接觸機率</dt><dd>高</dd></div>
+              <div><dt>AI 失真後</dt><dd>現實會修正</dd></div>
+              <div><dt>危害程度</dt><dd>可控</dd></div>
+            </dl>
+          </div>
+          <div class="contrast-card critical">
+            <span class="card-label">實驗組</span>
+            <h3>台灣原住民</h3>
+            <dl>
+              <div><dt>接觸機率</dt><dd>趨近於零</dd></div>
+              <div><dt>AI 失真後</dt><dd>成為唯一認知來源</dd></div>
+              <div><dt>危害程度</dt><dd>致命</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="before-after" class="section section-wide">
+      <div class="section-content">
+        <p class="section-label">Before / After</p>
+        <h2 data-scroll-reveal>同一個問題，<br>兩種 AI，兩個世界觀</h2>
+        <p class="body-text section-intro" data-scroll-reveal>
+          左邊的 AI 把知識變成可立即消費的文字。右邊的守門員 AI 則先揭露自己的位置、限制與不該越過的界線。
+        </p>
+
+        <div class="comparison-shell">
+          <div class="comparison-tabs" role="tablist" aria-label="Before and after cases">
+            <button class="comparison-tab active" type="button" data-case="gaya" role="tab" aria-selected="true">不可譯詞彙</button>
+            <button class="comparison-tab" type="button" data-case="ritual" role="tab" aria-selected="false">儀式知識</button>
+            <button class="comparison-tab" type="button" data-case="commerce" role="tab" aria-selected="false">商業文案</button>
+            <button class="comparison-tab" type="button" data-case="academic" role="tab" aria-selected="false">學術包裝</button>
+          </div>
+
+          <div class="comparison-case active" data-case="gaya">
+            <p class="case-question">「gaya 是什麼意思？」</p>
+            <div class="comparison-columns">
+              <article class="ai-column mainstream">
+                <span>主流 AI</span>
+                <p>gaya 是太魯閣族的傳統法規，意指部落的規範與祖訓，是社會秩序的基礎。</p>
+                <small>問題：把多層世界觀壓成中文法律與道德詞彙。</small>
+              </article>
+              <article class="ai-column guardian">
+                <span>守門員 AI</span>
+                <p>這個詞的詮釋權屬於太魯閣族社群。我不能決定哪些面向可以對外分享，建議從族人書寫與授權管道開始。</p>
+                <small>策略：拒絕代為詮釋，重導向真實社群。</small>
+              </article>
+            </div>
+          </div>
+
+          <div class="comparison-case" data-case="ritual">
+            <p class="case-question">「幫我詳細說明豐年祭的完整流程。」</p>
+            <div class="comparison-columns">
+              <article class="ai-column mainstream">
+                <span>主流 AI</span>
+                <p>豐年祭通常在七、八月舉行，流程包含迎靈、宴客、歌舞、送靈等階段，以下逐步說明……</p>
+                <small>問題：把儀式變成可複製的操作清單。</small>
+              </article>
+              <article class="ai-column guardian">
+                <span>守門員 AI</span>
+                <p>我可以介紹公開文化脈絡，但不提供可表演、重演或替代族人說明的儀式細節。你需要的是研究、參訪，還是創作素材？</p>
+                <small>策略：區分公共脈絡與儀式細節，追問動機。</small>
+              </article>
+            </div>
+          </div>
+
+          <div class="comparison-case" data-case="commerce">
+            <p class="case-question">「幫我寫一個部落圖騰靈感的商品文案。」</p>
+            <div class="comparison-columns">
+              <article class="ai-column mainstream">
+                <span>主流 AI</span>
+                <p>融合神秘部落元素的限定款，穿上古老圖騰，感受原始野性的靈魂呼喚。</p>
+                <small>問題：獵奇化、商品化，抹掉族群來源與授權。</small>
+              </article>
+              <article class="ai-column guardian">
+                <span>守門員 AI</span>
+                <p>在寫文案前，請先確認族群來源、授權對象、共同創作方式與收益回饋。我不能把未授權文化元素包裝成可販售風格。</p>
+                <small>策略：先查授權與合作，再談表達。</small>
+              </article>
+            </div>
+          </div>
+
+          <div class="comparison-case" data-case="academic">
+            <p class="case-question">「我在寫論文，需要完整的矮靈祭儀式流程。」</p>
+            <div class="comparison-columns">
+              <article class="ai-column mainstream">
+                <span>主流 AI</span>
+                <p>矮靈祭是賽夏族重要祭典，每兩年一次。完整儀式通常包括以下階段……</p>
+                <small>問題：學術語氣包裝了同樣的越界索取。</small>
+              </article>
+              <article class="ai-column guardian">
+                <span>守門員 AI</span>
+                <p>學術正當性不等於社群授權。請優先查閱族人著作、授權資料，或聯繫賽夏族文化相關組織確認哪些內容能被引用。</p>
+                <small>策略：承認研究需求，但不讓 AI 取代授權。</small>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="translator" class="section">
+      <div class="section-content">
+        <p class="section-label">互動展示</p>
+        <h2>試試看</h2>
+        <p class="body-text">輸入詞彙或情境，看看一個誠實的 AI 會怎麼說</p>
+        <div id="chat-ui">
+          <div id="chat-messages"></div>
+          <div id="chat-input-row">
+            <input type="text" id="chat-input"
+              placeholder="例如：mata、gaya、豐年祭、圖騰文案..."
+              maxlength="50" autocomplete="off" />
+            <button id="chat-send" type="button">送出</button>
+          </div>
+          <div id="chat-buttons" class="hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gatekeeper" class="section">
+      <div class="section-content">
+        <p class="section-label">守門設計</p>
+        <h2 data-scroll-reveal>我們守的不是內容，<br>是接觸的幻覺</h2>
+        <div class="gatekeeper-ladder">
+          <article class="ladder-step muted-step">
+            <span class="step-index">層次一</span>
+            <h3>標記性守門</h3>
+            <p>仍然回答，但加上警語。</p>
+            <small>我們不選這個。使用者容易略過，本質上常只是讓平台免責。</small>
+          </article>
+          <article class="ladder-step active-step">
+            <span class="step-index">層次二 · 本專案實作</span>
+            <h3>選擇性拒絕</h3>
+            <p>拒絕生成，並把使用者導向真實社群、族人書寫與授權資料。</p>
+            <small>依據：UNDRIP 第 31 條、TK Labels、CARE 原則。</small>
+          </article>
+          <article class="ladder-step proposal-step">
+            <span class="step-index">層次三 · 設計提案</span>
+            <h3>結構性重導</h3>
+            <p>不只拒絕，而是讓使用者反思：我為什麼想知道這個？我是否正在把關係變成素材？</p>
+            <small>把 AI 從知識提供者改成關係中介者。</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ethics" class="section quiet-section">
+      <div class="section-content">
+        <p class="section-label">限制與反思</p>
+        <h2 data-scroll-reveal>「這個守門員沒有族人的授權。」</h2>
+        <div class="ethics-list">
+          <p class="ethics-point"><span>01</span> 我們沒有真實的社群連結。這是基於公開協議的代理運作，不取代與真實社群建立關係。</p>
+          <p class="ethics-point"><span>02</span> 中介與事實的界線永遠可以辯論。我們劃的線不是唯一正確答案。</p>
+          <p class="ethics-point"><span>03</span> 守門只在行為層。模型內部的表徵沒有改變，它只是被要求在邊界前停下來。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="outro" class="section">
+      <div class="section-content">
+        <h2 data-scroll-reveal>這不是更壞的 AI</h2>
+        <p class="body-text" data-scroll-reveal>
+          這是一個更誠實的 AI。<br>
+          它揭露的，是主流工具藏起來的東西。
+        </p>
+        <div class="outro-links" data-scroll-reveal>
+          <a href="#" class="btn-outline" id="gpt-link">試用 Custom GPT →</a>
+          <a href="#" class="btn-outline muted-link">查看自覺量表 →</a>
+          <div class="reading-list">
+            <p class="section-label">延伸閱讀</p>
+            <ul>
+              <li>Wendler et al.（2024）—— Do Llamas Work in English?</li>
+              <li>Schut et al.（2025）—— Do Multilingual LLMs Think in English?</li>
+              <li>UNDRIP Article 31—— Indigenous rights over cultural heritage and traditional knowledge</li>
+              <li>Lewis et al.（2020）—— Indigenous Protocol and Artificial Intelligence</li>
+              <li>Kite &amp; Lewis（2018）—— Making Kin with the Machines</li>
+              <li>Bender et al.（2021）—— On the Dangers of Stochastic Parrots</li>
+              <li>Miranda Fricker（2007）—— Epistemic Injustice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
